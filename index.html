@@ -4,42 +4,231 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kiswaga Cloud Solutions</title>
-<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter', sans-serif;
+}
+
+body{
+background:#f9fafb;
+color:#111;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+}
+
+nav .logo{
+font-weight:700;
+font-size:20px;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-size:14px;
+}
+
+nav button{
+background:#111;
+color:white;
+padding:8px 14px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.hero{
+margin-top:90px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px 40px;
+gap:40px;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero-text h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero-text p{
+color:#555;
+margin-bottom:20px;
+line-height:1.6;
+}
+
+.hero-text button{
+background:#25D366;
+color:white;
+padding:12px 18px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+}
+
+.hero img{
+width:420px;
+border-radius:12px;
+object-fit:cover;
+}
+
+.about{
+display:flex;
+gap:40px;
+padding:60px 40px;
+align-items:center;
+}
+
+.about img{
+width:350px;
+border-radius:12px;
+object-fit:cover;
+}
+
+.about-text h2{
+margin-bottom:15px;
+}
+
+.about-text p{
+color:#555;
+line-height:1.6;
+}
+
+
+.cta{
+background:#111;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.cta button{
+margin-top:20px;
+padding:12px 20px;
+border:none;
+border-radius:8px;
+background:#25D366;
+color:white;
+cursor:pointer;
+font-weight:600;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#fff;
+color:#666;
+}
+
+
+@media(max-width:768px){
+.hero, .about{
+flex-direction:column;
+text-align:center;
+}
+
+.hero img, .about img{
+width:100%;
+}
+nav ul{
+display:none;
+}
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <div class="logo">☁️</div>
-    <h1>Kiswaga Cloud Solutions</h1>
+<nav>
+<div class="logo">Kiswaga Cloud Solutions</div>
 
-    <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+
+<button onclick="openWA()">WhatsApp</button>
+</nav>
 
 <section class="hero">
-    <h2>Welcome to Kiswaga Cloud Solutions 2026</h2>
-    <p>
-Providing modern cloud solutions for businesses in 2026.
+<div class="hero-text">
+<h1>Build Smart Digital Solutions for Your Business in Africa</h1>
+<p>
+We help African businesses grow through websites, automation, AI chatbots, and modern software systems designed for real-world impact.
 </p>
-    <p>
-        We provide cloud computing, cybersecurity,
-        web hosting and digital transformation solutions
-        for businesses across Africa.
-    </p>
+<button onclick="openWA()">Start Project</button>
+</div>
 
-    <img src="file:///C:/Users/kenet/OneDrive/Pictures/Screenshots/cloud.jpg" alt="Cloud Image">
+<img src="KK.png" alt="African tech team">
+</section>
+
+
+<section class="about">
+<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="African entrepreneur working">
+
+<div class="about-text">
+<h2>Why Choose Us</h2>
+<p>
+We are a modern African tech team focused on building scalable digital systems that help businesses grow faster, smarter, and more efficiently using technology and AI.
+</p>
+</div>
+</section>
+
+<section class="cta">
+<h2>Ready to Build Your Project?</h2>
+<p>Talk to us today and let's bring your idea to life.</p>
+<button onclick="openWA()">Contact on WhatsApp</button>
 </section>
 
 <footer>
-    <p>© 2026 Kiswaga Cloud Solutions. All Rights Reserved.</p>
-    <footer>
-  <p>Copyright © 2026 Kiswaga Cloud Solutions. All rights reserved.</p>
-  <p>Email: kiswagasolutions@icloud.com | Phone: +255 622 977 024</p>
+© 2026 Kiswaga Cloud Solutions. All rights reserved.
 </footer>
-</footer>
+<h2>Our Location</h2>
+
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps?q=Arusha%20Mianzini&output=embed"
+    width="100%"
+    height="350"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+<script>
+function openWA(){
+const phone = "255622977024";
+const msg = "Habari, naomba maelezo kuhusu huduma zenu";
+window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,"_blank");
+}
+</script>
 
 </body>
 </html>
